@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luminex Painting Co. | Interior Painting</title>
+<meta name="description" content="Interior painting services in the Charlotte area. Request a free estimate from Luminex Painting Co.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#102746;background:#fff}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 7%;border-bottom:1px solid #e5e9ef}
+.brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.brand small{display:block;font-size:11px;letter-spacing:3px;font-weight:500}
+.btn{display:inline-block;background:#0c3765;color:#fff;text-decoration:none;border:0;border-radius:8px;padding:16px 22px;font-weight:800;font-size:17px}
+.hero{background:#082b50;padding:28px 6% 48px}
+.card{max-width:760px;margin:auto;background:#fff;border-radius:24px;padding:30px}
+.card h1{font-size:34px;margin:0 0 8px}
+.muted{color:#6c7a8e}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:700;margin:15px 0 7px}
+input,select,textarea{width:100%;padding:15px;border:1px solid #ccd3dc;border-radius:9px;font-size:16px}
+textarea{min-height:110px}
+.submit{width:100%;margin-top:18px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;padding:34px 6%}
+.facts b{display:block;font-size:18px}
+.services{padding:40px 6%;max-width:1000px;margin:auto}
+.services h2{text-align:center;font-size:40px}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{border:1px solid #e0e5eb;border-radius:20px;padding:28px}
+.call{position:sticky;bottom:12px;display:block;max-width:760px;margin:20px auto;background:#0c3765;color:#fff;text-align:center;text-decoration:none;padding:18px;border-radius:12px;font-weight:800}
+@media(max-width:650px){
+  header{padding:18px 6%}
+  .brand{font-size:18px}
+  .grid,.service-grid{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .card h1{font-size:30px}
+  .services h2{font-size:34px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">LUMINEX <small>PAINTING CO.</small></div>
+  <a class="btn" href="#estimate">Free Estimate</a>
+</header>
+<main>
+<section class="hero">
+  <div class="card" id="estimate">
+    <h1>Get Your Free Estimate</h1>
+    <p class="muted">Tell us a little about your project.</p>
+    <form action="sms:+19805009541" method="get">
+      <div class="grid">
+        <div><label>Name</label><input name="name" placeholder="Your name" required></div>
+        <div><label>Phone</label><input name="phone" type="tel" placeholder="Your phone number" required></div>
+      </div>
+      <label>What would you like painted?</label>
+      <select name="service">
+        <option>Interior walls</option>
+        <option>Walls & ceilings</option>
+        <option>Trim & baseboards</option>
+        <option>Doors & frames</option>
+        <option>Multiple interior areas</option>
+      </select>
+      <label>Project details</label>
+      <textarea name="body" placeholder="Living room, hallway, 2 bedrooms..."></textarea>
+      <button class="btn submit" type="submit">Request My Free Estimate</button>
+    </form>
+  </div>
+</section>
+<section class="facts">
+  <div><b>FREE</b>Estimates</div>
+  <div><b>LOCAL</b>Charlotte Area</div>
+  <div><b>INTERIOR</b>Painting Focus</div>
+  <div><b>EASY</b>Call or Text</div>
+</section>
+<section class="services">
+  <h2>Interior Painting Services</h2>
+  <p class="muted" style="text-align:center">Focused residential painting services for the spaces inside your home.</p>
+  <div class="service-grid">
+    <div class="service"><h3>Walls & Ceilings</h3><p>Refresh bedrooms, living areas, hallways and other interior spaces.</p></div>
+    <div class="service"><h3>Trim & Baseboards</h3><p>Give worn trim and baseboards a clean, finished appearance.</p></div>
+    <div class="service"><h3>Doors & Frames</h3><p>Complete the room with professionally painted doors and frames.</p></div>
+  </div>
+</section>
+</main>
+<a class="call" href="tel:+19805009541">Call Now • (980) 500-9541</a>
+</body>
+</html>
