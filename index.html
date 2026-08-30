@@ -3,87 +3,92 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Luminex Painting Co. | Interior Painting</title>
-<meta name="description" content="Interior painting services in the Charlotte area. Request a free estimate from Luminex Painting Co.">
+<title>Luminex Painting Co. | Luxury Interior Painting</title>
+<meta name="description" content="Premium interior painting for homes in Concord, Kannapolis and the greater Charlotte area. Free estimates from Luminex Painting Co.">
+<meta name="theme-color" content="#071d35">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:#102746;background:#fff}
-header{display:flex;align-items:center;justify-content:space-between;padding:22px 7%;border-bottom:1px solid #e5e9ef}
-.brand{font-size:22px;font-weight:800;letter-spacing:1px} 
-  .brand img{width:280px;height:auto;display:block}
-.brand small{display:block;font-size:11px;letter-spacing:3px;font-weight:500}
-.btn{display:inline-block;background:#0c3765;color:#fff;text-decoration:none;border:0;border-radius:8px;padding:16px 22px;font-weight:800;font-size:17px}
-.hero{background:#082b50;padding:28px 6% 48px}
-.card{max-width:760px;margin:auto;background:#fff;border-radius:24px;padding:30px}
-.card h1{font-size:34px;margin:0 0 8px}
-.muted{color:#6c7a8e}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-label{display:block;font-weight:700;margin:15px 0 7px}
-input,select,textarea{width:100%;padding:15px;border:1px solid #ccd3dc;border-radius:9px;font-size:16px}
-textarea{min-height:110px}
-.submit{width:100%;margin-top:18px}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;padding:34px 6%}
-.facts b{display:block;font-size:18px}
-.services{padding:40px 6%;max-width:1000px;margin:auto}
-.services h2{text-align:center;font-size:40px}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service{border:1px solid #e0e5eb;border-radius:20px;padding:28px}
-.call{position:sticky;bottom:12px;display:block;max-width:760px;margin:20px auto;background:#0c3765;color:#fff;text-align:center;text-decoration:none;padding:18px;border-radius:12px;font-weight:800}
-@media(max-width:650px){
-  header{padding:10px 6%}
-  .brand{font-size:18px}
-  .grid,.service-grid{grid-template-columns:1fr}
-  .facts{grid-template-columns:1fr 1fr}
-  .card h1{font-size:30px}
-  .services h2{font-size:34px}
-}
+:root{--navy:#071d35;--navy2:#0b2d53;--ink:#0c1f34;--ivory:#f7f4ee;--paper:#fffdf9;--muted:#6f7884;--line:#e5e0d7;--gold:#c8a56a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}a{color:inherit}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 6%;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,31,52,.08)}
+.logo{display:block;width:170px;height:auto}.nav{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:650}.nav a{text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;text-decoration:none;border:1px solid var(--navy);border-radius:999px;padding:14px 21px;font-weight:800;letter-spacing:.01em;transition:.2s}.btn:hover{transform:translateY(-1px);background:var(--navy2)}.btn.light{background:#fff;color:var(--navy);border-color:#fff}
+.hero{min-height:700px;display:grid;grid-template-columns:1.08fr .92fr;background:linear-gradient(135deg,#071d35 0%,#0b2d53 100%);color:#fff;overflow:hidden}.hero-copy{padding:90px 8% 80px 11%;display:flex;flex-direction:column;justify-content:center}.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:800;color:#d8c19d;margin-bottom:20px}.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(50px,6vw,86px);line-height:.98;letter-spacing:-.035em;margin:0 0 26px;max-width:720px}.hero p{font-size:19px;line-height:1.7;color:#dbe4ee;max-width:600px;margin:0 0 34px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.hero-note{margin-top:28px;font-size:13px;letter-spacing:.08em;color:#b9c7d6}.hero-art{position:relative;display:flex;align-items:center;justify-content:center;padding:48px;background:radial-gradient(circle at 50% 42%,rgba(255,255,255,.13),rgba(255,255,255,0) 57%)}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.14);border-radius:50%}.hero-art:before{width:520px;height:520px}.hero-art:after{width:390px;height:390px}.hero-logo-wrap{position:relative;z-index:2;width:min(470px,90%);background:#fff;border-radius:28px;padding:32px;box-shadow:0 32px 80px rgba(0,0,0,.25)}.hero-logo-wrap img{width:100%;display:block}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line);background:#fff}.trust div{padding:26px 22px;text-align:center;border-right:1px solid var(--line);font-size:13px;color:var(--muted)}.trust div:last-child{border-right:0}.trust strong{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+.section{padding:92px 7%}.intro{max-width:1160px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.2em;font-weight:800;color:#8c6d3c}.intro h2,.services h2,.estimate h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(38px,4.5vw,64px);line-height:1.08;letter-spacing:-.025em;margin:12px 0 0}.intro-copy{font-size:18px;color:#5f6974;line-height:1.8}.intro-copy strong{color:var(--ink)}
+.services{background:var(--ivory)}.services-inner{max-width:1180px;margin:auto}.services-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}.services-head p{max-width:500px;color:var(--muted);margin:0}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:var(--paper);border:1px solid #e8e1d8;border-radius:20px;padding:34px;min-height:260px;display:flex;flex-direction:column}.service-num{font-family:Georgia,serif;font-size:15px;color:#a58961;margin-bottom:58px}.service h3{font-family:Georgia,serif;font-size:28px;font-weight:500;margin:0 0 12px}.service p{color:var(--muted);margin:0}.service span{margin-top:auto;font-size:12px;text-transform:uppercase;letter-spacing:.13em;font-weight:800}
+.process{max-width:1180px;margin:auto}.process-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.process-card{background:var(--navy);color:white;border-radius:28px;padding:48px}.process-card h3{font-family:Georgia,serif;font-weight:500;font-size:38px;margin:0 0 26px}.step{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:20px 0;border-top:1px solid rgba(255,255,255,.16)}.step b{font-size:13px;color:#d8c19d}.step strong{display:block;margin-bottom:4px}.step p{margin:0;color:#bfccda;font-size:14px}.process-copy h2{font-family:Georgia,serif;font-size:52px;font-weight:500;line-height:1.08;margin:10px 0 22px}.process-copy p{color:var(--muted);font-size:17px;line-height:1.8}
+.estimate{background:#fff}.estimate-wrap{max-width:1080px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 22px 70px rgba(27,39,51,.08)}.estimate-copy{background:var(--navy);color:#fff;padding:52px}.estimate-copy p{color:#cad5df;line-height:1.8}.estimate-copy .phone{display:inline-block;margin-top:26px;font-weight:800;font-size:20px;text-decoration:none}.form{padding:46px}.form h3{font-family:Georgia,serif;font-size:34px;font-weight:500;margin:0 0 8px}.form>p{margin-top:0;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-top:15px}label{display:block;font-size:13px;font-weight:750;margin-bottom:7px}input,select,textarea{width:100%;padding:14px 15px;border:1px solid #d9d7d2;border-radius:10px;background:#fff;font:inherit;color:var(--ink);outline:none}input:focus,select:focus,textarea:focus{border-color:#7990a8;box-shadow:0 0 0 3px rgba(7,29,53,.07)}textarea{min-height:110px;resize:vertical}.submit{width:100%;margin-top:20px;border-radius:10px;font-size:16px;cursor:pointer}.tiny{font-size:12px;color:#8b9299;margin-top:10px;text-align:center}
+footer{background:#06172a;color:#dce5ee;padding:36px 7%}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:30px}.foot img{width:135px;background:#fff;border-radius:10px;padding:7px}.foot p{margin:0;font-size:13px;color:#9fabb8;text-align:right}
+.mobile-call{display:none}
+@media(max-width:900px){.nav a:not(.btn){display:none}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:70px 7% 44px}.hero-art{padding:18px 7% 58px}.hero-art:before{width:390px;height:390px}.hero-art:after{width:300px;height:300px}.hero-logo-wrap{max-width:390px}.trust{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-right:0}.trust div:nth-child(-n+2){border-bottom:1px solid var(--line)}.intro,.process-grid,.estimate-wrap{grid-template-columns:1fr;gap:38px}.service-grid{grid-template-columns:1fr}.services-head{display:block}.services-head p{margin-top:18px}.estimate-copy,.form{padding:36px}.section{padding:68px 6%}}
+@media(max-width:600px){body{padding-bottom:76px}header{padding:10px 5%}.logo{width:132px}.nav .btn{padding:11px 15px;font-size:13px}.hero-copy{padding:58px 6% 38px}.hero h1{font-size:48px}.hero p{font-size:17px}.hero-art:before,.hero-art:after{display:none}.hero-logo-wrap{border-radius:18px;padding:20px}.trust div{padding:19px 12px}.grid{grid-template-columns:1fr}.estimate-copy,.form{padding:28px 22px}.foot{display:block;text-align:center}.foot img{margin-bottom:16px}.foot p{text-align:center}.mobile-call{display:block;position:fixed;left:12px;right:12px;bottom:10px;z-index:30;background:var(--navy);color:white;text-align:center;text-decoration:none;font-weight:800;padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.22)}}
 </style>
 </head>
 <body>
 <header>
-  <div class="brand"><img src="5B6D6E02-CF5A-4BF4-B012-50A2573D19AD.png" alt="Luminex Painting Co." style="width:180px;height:auto;display:block;"></div>
-  <a class="btn" href="#estimate">Free Estimate</a>
+  <a href="#top" aria-label="Luminex Painting Co. home"><img class="logo" src="5B6D6E02-CF5A-4BF4-B012-50A2573D19AD.png" alt="Luminex Painting Co."></a>
+  <nav class="nav"><a href="#services">Services</a><a href="#process">Process</a><a href="#estimate" class="btn">Free Estimate</a></nav>
 </header>
-<main>
+<main id="top">
 <section class="hero">
-  <div class="card" id="estimate">
-    <h1>Get Your Free Estimate</h1>
-    <p class="muted">Tell us a little about your project.</p>
-    <form action="sms:+17047875727" method="get">
-      <div class="grid">
-        <div><label>Name</label><input name="name" placeholder="Your name" required></div>
-        <div><label>Phone</label><input name="phone" type="tel" placeholder="Your phone number" required></div>
-      </div>
-      <label>What would you like painted?</label>
-      <select name="service">
-        <option>Interior walls</option>
-        <option>Walls & ceilings</option>
-        <option>Trim & baseboards</option>
-        <option>Doors & frames</option>
-        <option>Multiple interior areas</option>
-      </select>
-      <label>Project details</label>
-      <textarea name="body" placeholder="Living room, hallway, 2 bedrooms..."></textarea>
-      <button class="btn submit" type="submit">Request My Free Estimate</button>
+  <div class="hero-copy">
+    <div class="eyebrow">Premium Interior Painting · North Carolina</div>
+    <h1>Refined interiors. Beautifully finished.</h1>
+    <p>Luminex Painting Co. brings careful preparation, clean workmanship and a polished finish to the rooms you live in every day.</p>
+    <div class="hero-actions"><a class="btn light" href="#estimate">Request a Free Estimate</a><a class="btn" style="border-color:rgba(255,255,255,.35)" href="tel:+17047875727">Call (704) 787-5727</a></div>
+    <div class="hero-note">CONCORD · KANNAPOLIS · GREATER CHARLOTTE AREA</div>
+  </div>
+  <div class="hero-art"><div class="hero-logo-wrap"><img src="5B6D6E02-CF5A-4BF4-B012-50A2573D19AD.png" alt="Luminex Painting Co. — Luxury in every brushstroke."></div></div>
+</section>
+<section class="trust">
+  <div><strong>Free Estimates</strong>Straightforward project consultations</div>
+  <div><strong>Interior Focus</strong>Homes, rooms and living spaces</div>
+  <div><strong>Detail Driven</strong>Prep, edges and clean finishes</div>
+  <div><strong>Local Service</strong>Concord, Kannapolis & Charlotte area</div>
+</section>
+<section class="section">
+  <div class="intro">
+    <div><div class="kicker">The Luminex Standard</div><h2>Luxury is in the details.</h2></div>
+    <div class="intro-copy">A great paint job should feel effortless when it is finished. <strong>Clean lines, smooth surfaces and a space that feels renewed.</strong> We focus on the preparation and finishing details that create a more polished interior.</div>
+  </div>
+</section>
+<section class="section services" id="services">
+  <div class="services-inner">
+    <div class="services-head"><div><div class="kicker">Interior Services</div><h2>Elevate every room.</h2></div><p>Focused residential painting services designed to refresh, refine and complete the spaces inside your home.</p></div>
+    <div class="service-grid">
+      <article class="service"><div class="service-num">01</div><h3>Walls & Ceilings</h3><p>Fresh color and smooth, even coverage for bedrooms, living rooms, hallways and more.</p><span>Interior painting</span></article>
+      <article class="service"><div class="service-num">02</div><h3>Trim & Baseboards</h3><p>Crisp edges and a clean finish that gives the entire room a more complete look.</p><span>Finish details</span></article>
+      <article class="service"><div class="service-num">03</div><h3>Doors & Frames</h3><p>Professional finishing for doors and frames so the details match the quality of the room.</p><span>Final touches</span></article>
+    </div>
+  </div>
+</section>
+<section class="section" id="process">
+  <div class="process process-grid">
+    <div class="process-card"><h3>A simple, professional process.</h3>
+      <div class="step"><b>01</b><div><strong>Request your estimate</strong><p>Tell us about the rooms and surfaces you want painted.</p></div></div>
+      <div class="step"><b>02</b><div><strong>Review the project</strong><p>We look at the scope, condition and details before work begins.</p></div></div>
+      <div class="step"><b>03</b><div><strong>Prepare & paint</strong><p>Surfaces are prepared as needed, then professionally finished.</p></div></div>
+      <div class="step"><b>04</b><div><strong>Final walkthrough</strong><p>We review the completed work and finishing details with you.</p></div></div>
+    </div>
+    <div class="process-copy"><div class="kicker">Designed Around Your Home</div><h2>Professional from estimate to final walkthrough.</h2><p>Your home deserves care. Our goal is to make the process easy to understand, keep the work focused, and leave you with a finish that feels crisp and intentional.</p><a class="btn" href="#estimate">Start Your Estimate</a></div>
+  </div>
+</section>
+<section class="section estimate" id="estimate">
+  <div class="estimate-wrap">
+    <div class="estimate-copy"><div class="kicker" style="color:#d8c19d">Free Estimate</div><h2>Ready for a fresh interior?</h2><p>Send us a few details about your project and your phone will open a pre-filled text to Luminex Painting Co.</p><a class="phone" href="tel:+17047875727">(704) 787-5727</a></div>
+    <form class="form" id="estimateForm">
+      <h3>Tell us about your project.</h3><p>We’ll make it easy to get started.</p>
+      <div class="grid"><div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" placeholder="Your name" required></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number" required></div></div>
+      <div class="field"><label for="service">What would you like painted?</label><select id="service" name="service"><option>Interior walls</option><option>Walls & ceilings</option><option>Trim & baseboards</option><option>Doors & frames</option><option>Multiple interior areas</option></select></div>
+      <div class="field"><label for="details">Project details</label><textarea id="details" name="details" placeholder="Example: Living room, hallway and 2 bedrooms..."></textarea></div>
+      <button class="btn submit" type="submit">Request My Free Estimate</button><div class="tiny">Submitting opens a text message to Luminex Painting Co.</div>
     </form>
   </div>
 </section>
-<section class="facts">
-  <div><b>FREE</b>Estimates</div>
-  <div><b>LOCAL</b>Charlotte Area</div>
-  <div><b>INTERIOR</b>Painting Focus</div>
-  <div><b>EASY</b>Call or Text</div>
-</section>
-<section class="services">
-  <h2>Interior Painting Services</h2>
-  <p class="muted" style="text-align:center">Focused residential painting services for the spaces inside your home.</p>
-  <div class="service-grid">
-    <div class="service"><h3>Walls & Ceilings</h3><p>Refresh bedrooms, living areas, hallways and other interior spaces.</p></div>
-    <div class="service"><h3>Trim & Baseboards</h3><p>Give worn trim and baseboards a clean, finished appearance.</p></div>
-    <div class="service"><h3>Doors & Frames</h3><p>Complete the room with professionally painted doors and frames.</p></div>
-  </div>
-</section>
 </main>
-<a class="call" href="tel:+17047875727">Call Now • (704) 787-5727</a>
+<footer><div class="foot"><img src="5B6D6E02-CF5A-4BF4-B012-50A2573D19AD.png" alt="Luminex Painting Co."><p>Interior painting · Concord · Kannapolis · Greater Charlotte Area<br>Luxury in every brushstroke.</p></div></footer>
+<a class="mobile-call" href="tel:+17047875727">Call Luminex · (704) 787-5727</a>
+<script>
+document.getElementById('estimateForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value.trim();const phone=document.getElementById('phone').value.trim();const service=document.getElementById('service').value;const details=document.getElementById('details').value.trim();const text=`Hi Luminex Painting Co., I would like a free estimate.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AProject: ${encodeURIComponent(service)}%0ADetails: ${encodeURIComponent(details||'Not provided')}`;window.location.href=`sms:+17047875727?&body=${text}`;});
+</script>
 </body>
 </html>
