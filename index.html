@@ -50,11 +50,27 @@ footer{background:#06172a;color:#dce5ee;padding:34px 7%}.foot{max-width:1180px;m
 </main>
 <footer><div class="foot"><img src="5B6D6E02-CF5A-4BF4-B012-50A2573D19AD.png" alt="Luminex Painting Co."><p>Interior painting · Concord · Kannapolis · Greater Charlotte Area<br>Luxury in every brushstroke. · Interior inspiration imagery via Unsplash.</p></div></footer>
 <a class="mobile-call" href="tel:+17047875727">Call Luminex · (704) 787-5727</a>
-<script>document.getElementById('estimateForm').addEventListener('submit',function(e){e.preventDefault();const n=document.getElementById('name').value.trim(),p=document.getElementById('phone').value.trim(),s=document.getElementById('service').value,d=document.getElementById('details').value.trim();const body=`Hi Luminex Painting Co., I would like a free estimate.\
+<script>
+document.getElementById('estimateForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const n=document.getElementById('name').value.trim(),p=document.getElementById('phone').value.trim(),s=document.getElementById('service').value,d=document.getElementById('details').value.trim();
+  const body=`Hi Luminex Painting Co., I would like a free estimate.\
 \
 Name: ${n}\
 Phone: ${p}\
 Project: ${s}\
-Details: ${d||'Not provided'}`;window.location.href='sms:+17047875727?&body='+encodeURIComponent(body)});</script>
+Details: ${d||'Not provided'}`;
+  const smsUrl='sms:+17047875727?&body='+encodeURIComponent(body);
+  let opened=false;
+  const openSms=()=>{if(opened)return;opened=true;window.location.href=smsUrl;};
+  gtag('event','conversion',{
+    'send_to':'AW-18392172792/HMHiCPaslO8cEPiRicJE',
+    'value':1.0,
+    'currency':'USD',
+    'event_callback':openSms
+  });
+  setTimeout(openSms,1200);
+});
+</script>
 </body>
 </html>
