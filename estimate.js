@@ -43,13 +43,13 @@
     storage.set('luminexEstimateConversionSent', '1');
   }
 
-  // Track a valid estimate-form submission immediately so the conversion is
-  // not lost if the external form service redirects without preserving query
-  // parameters or if the browser leaves the page before the thank-you state.
+  // Record intent only. Count a lead after the form service returns to
+  // the confirmation URL, not before it accepts the request.
   if (form) form.addEventListener('submit', () => {
+    storage.remove('luminexEstimateTxn');
+    storage.remove('luminexEstimateConversionSent');
     storage.set('luminexEstimatePending', '1');
     ensureTransactionId();
-    trackEstimateLead('estimate_form_submit');
   });
 
   // Phone-link clicks are useful analytics events, but are not treated here
@@ -65,9 +65,8 @@
     });
   });
 
-  // Keep the existing thank-you redirect flow as a fallback. If the submit
-  // event already sent the Ads conversion, the session flag prevents a
-  // duplicate conversion from being recorded.
+  // The provider redirects here after submission. A pending request guards
+  // against conversions from direct visits and reloads of the confirmation URL.
   if (new URLSearchParams(location.search).get('submitted') !== 'true') return;
 
   if (storage.get('luminexEstimatePending') === '1') {
