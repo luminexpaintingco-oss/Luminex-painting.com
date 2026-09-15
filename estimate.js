@@ -24,7 +24,9 @@
 
     const txn = ensureTransactionId();
 
-    if (typeof fbq === 'function') fbq('track', 'Lead');
+    // A failure in one analytics provider must not block the other.
+    try { if (typeof fbq === 'function') fbq('track', 'Lead'); }
+    catch (error) { console.warn('Luminex Meta lead tracking failed', error); }
 
     if (typeof gtag === 'function') {
       gtag('event', 'generate_lead', {
@@ -91,7 +93,8 @@
     }
     if (!accepted) return;
     // Analytics errors must never hide a successfully submitted request.
-    try { trackEstimateLead('estimate_form_confirmed'); } catch (_) {}
+    try { trackEstimateLead('estimate_form_confirmed'); }
+    catch (error) { console.warn('Luminex Google lead tracking failed', error); }
     storage.remove('luminexEstimatePending');
     showConfirmation();
   });
