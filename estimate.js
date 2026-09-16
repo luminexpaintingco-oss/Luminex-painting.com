@@ -4,6 +4,64 @@
   const form = document.getElementById('estimateForm');
   const ADS_CONVERSION = 'AW-18392172792/HMHiCPaslO8cEPiRicJE';
 
+  // Strengthen internal discovery paths from the homepage without changing
+  // the existing page layout or core conversion flow. Google can render these
+  // normal anchor links, and visitors can use them to reach nearby-area pages.
+  function addDiscoveryLinks() {
+    const serviceAreas = [
+      ['interior-painters-salisbury-nc.html', 'Salisbury, NC'],
+      ['interior-painters-huntersville-nc.html', 'Huntersville, NC'],
+      ['interior-painters-mooresville-nc.html', 'Mooresville, NC'],
+      ['interior-painters-davidson-nc.html', 'Davidson, NC'],
+      ['interior-painters-cornelius-nc.html', 'Cornelius, NC'],
+      ['interior-painters-harrisburg-nc.html', 'Harrisburg, NC']
+    ];
+
+    const areaList = document.querySelector('.area-list');
+    if (areaList) {
+      const existing = new Set(
+        Array.from(areaList.querySelectorAll('a')).map(link => link.getAttribute('href'))
+      );
+      const nearby = areaList.querySelector('a[href="#estimate"]');
+
+      serviceAreas.forEach(([href, label]) => {
+        if (existing.has(href)) return;
+        const link = document.createElement('a');
+        link.href = href;
+        link.textContent = label;
+        areaList.insertBefore(link, nearby || null);
+      });
+
+      if (nearby && nearby.textContent.trim() === 'Nearby Communities') nearby.remove();
+    }
+
+    const guidesWrap = document.querySelector('#guides .wrap');
+    if (guidesWrap && !document.getElementById('more-city-guides')) {
+      const moreGuides = document.createElement('div');
+      moreGuides.id = 'more-city-guides';
+      moreGuides.className = 'area-links';
+
+      [
+        ['interior-painting-cost-salisbury-nc.html', 'Salisbury Cost Guide →'],
+        ['interior-painting-cost-huntersville-nc.html', 'Huntersville Cost Guide →'],
+        ['interior-painting-cost-mooresville-nc.html', 'Mooresville Cost Guide →'],
+        ['interior-painting-cost-davidson-nc.html', 'Davidson Cost Guide →'],
+        ['interior-painting-cost-cornelius-nc.html', 'Cornelius Cost Guide →'],
+        ['interior-painting-cost-harrisburg-nc.html', 'Harrisburg Cost Guide →']
+      ].forEach(([href, label]) => {
+        const link = document.createElement('a');
+        link.className = 'area-link';
+        link.href = href;
+        link.textContent = label;
+        moreGuides.appendChild(link);
+      });
+
+      guidesWrap.appendChild(moreGuides);
+    }
+  }
+
+  addDiscoveryLinks();
+
   const storage = {
     get(key) { try { return sessionStorage.getItem(key); } catch (_) { return null; } },
     set(key, value) { try { sessionStorage.setItem(key, value); } catch (_) {} },
