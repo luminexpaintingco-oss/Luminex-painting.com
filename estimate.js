@@ -159,15 +159,19 @@
 
   // Phone-link clicks are useful analytics events, but are not treated here
   // as completed leads/calls. Google Ads call reporting handles calls from ads.
-  document.querySelectorAll('a[href="tel:+17047875727"]').forEach(link => {
-    link.addEventListener('click', () => {
+  // Delegate so the phone link added by showConfirmation is tracked too.
+  document.addEventListener('click', event => {
+    const link = event.target.closest && event.target.closest('a[href="tel:+17047875727"]');
+    if (!link) return;
+    try {
       if (typeof gtag === 'function') {
         gtag('event', 'click_to_call', {
-          link_location: link.closest('.lead-mobile') ? 'mobile_bar' : 'page',
+          link_location: link.closest('[role="status"]') ? 'confirmation' :
+            link.closest('.lead-mobile') ? 'mobile_bar' : 'page',
           page_path: location.pathname
         });
       }
-    });
+    } catch (error) { console.warn('Luminex phone click tracking failed', error); }
   });
 
   // The provider redirects here after submission. A pending request guards
