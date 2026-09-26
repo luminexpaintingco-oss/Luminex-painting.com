@@ -62,6 +62,41 @@
 
   addDiscoveryLinks();
 
+  // Preserve acquisition details so every submitted lead email tells us where
+  // the visitor came from. This helps separate Google Ads, organic search,
+  // referrals and direct traffic without adding any fields for the customer.
+  function addLeadAttribution() {
+    if (!form) return;
+    const params = new URLSearchParams(location.search);
+    const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'];
+    keys.forEach(key => {
+      const current = params.get(key);
+      if (current) {
+        try { sessionStorage.setItem('luminex_' + key, current); } catch (_) {}
+      }
+      let value = current;
+      if (!value) {
+        try { value = sessionStorage.getItem('luminex_' + key); } catch (_) {}
+      }
+      if (!value) return;
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = value;
+      form.appendChild(input);
+    });
+    const ref = document.referrer;
+    if (ref) {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'Referrer';
+      input.value = ref;
+      form.appendChild(input);
+    }
+  }
+
+  addLeadAttribution();
+
   const storage = {
     get(key) { try { return sessionStorage.getItem(key); } catch (_) { return null; } },
     set(key, value) { try { sessionStorage.setItem(key, value); } catch (_) {} },
