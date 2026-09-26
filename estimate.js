@@ -140,7 +140,7 @@
 
   function showConfirmation() {
     if (!form) return;
-    form.innerHTML = '<div role="status"><h3>Thank you!</h3><p>Your estimate request was submitted. We’ll contact you to discuss your project.</p><p>Prefer to speak now? <a href="tel:+17047875727">Call (704) 787-5727</a>.</p></div>';
+    form.innerHTML = '<div role="status"><h3>Thank you!</h3><p>Your estimate request was submitted. We’ll contact you to discuss your project.</p><p>Prefer to speak now? <a href="tel:+17047875727">Call (704) 787-5727</a> or <a href="sms:+17047875727" data-text-cta="confirmation">text us</a>.</p></div>';
     form.setAttribute('tabindex', '-1');
     form.focus({preventScroll:true});
   }
@@ -207,6 +207,20 @@
         });
       }
     } catch (error) { console.warn('Luminex phone click tracking failed', error); }
+  });
+
+  // Track text-message intent separately from completed estimate leads.
+  document.addEventListener('click', event => {
+    const link = event.target.closest && event.target.closest('a[href="sms:+17047875727"]');
+    if (!link) return;
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_to_text', {
+          link_location: link.dataset.textCta || (link.closest('[role="status"]') ? 'confirmation' : 'page'),
+          page_path: location.pathname
+        });
+      }
+    } catch (error) { console.warn('Luminex text click tracking failed', error); }
   });
 
   // The provider redirects here after submission. A pending request guards
