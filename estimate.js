@@ -4,6 +4,23 @@
   const form = document.getElementById('estimateForm');
   const ADS_CONVERSION = 'AW-18392172792/HMHiCPaslO8cEPiRicJE';
 
+  const referralSource = document.getElementById('referralSource');
+  const referralOtherWrap = document.getElementById('referralOtherWrap');
+  const referralOther = document.getElementById('referralOther');
+
+  function syncReferralOther() {
+    if (!referralSource || !referralOtherWrap || !referralOther) return;
+    const showOther = referralSource.value === 'Other';
+    referralOtherWrap.hidden = !showOther;
+    referralOther.required = showOther;
+    if (!showOther) referralOther.value = '';
+  }
+
+  if (referralSource) {
+    referralSource.addEventListener('change', syncReferralOther);
+    syncReferralOther();
+  }
+
   // Strengthen internal discovery paths from the homepage without changing
   // the existing page layout or core conversion flow. Google can render these
   // normal anchor links, and visitors can use them to reach nearby-area pages.
