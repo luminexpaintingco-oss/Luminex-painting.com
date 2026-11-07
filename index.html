@@ -80,6 +80,17 @@ fbq('track', 'PageView');
 .nearby-city-links a{color:var(--muted);font-size:13px;text-underline-offset:3px}
 .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:600px){.priority-city-grid{grid-template-columns:1fr}.priority-city{min-height:auto}.guide-grid{grid-template-columns:1fr}}
+
+/* Homepage conversion clarity and project portfolio */
+.hero-actions{align-items:center}
+.hero-secondary{background:transparent;border-color:rgba(255,255,255,.7);color:#fff}
+.hero-secondary:hover{background:rgba(255,255,255,.13)}
+.hero-help{font-size:14px!important;line-height:1.6!important;margin:14px 0 0!important;color:#dbe5ef!important}
+.hero-help a{color:#fff;text-underline-offset:3px;font-weight:700}
+.intro-copy a{font-weight:800;color:var(--navy);text-underline-offset:4px}
+.gallery-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:24px}
+.gallery-alt{color:#fff;text-underline-offset:4px;font-weight:750}
+@media(max-width:600px){.hero-actions>.btn{width:100%}.hero-help{font-size:13px!important}}
 </style>
 <link rel="stylesheet" href="estimate.css?v=20261004a"><script defer src="estimate.js?v=20261004a"></script></head>
 <body>
@@ -89,9 +100,10 @@ fbq('track', 'PageView');
     <a class="home-nav" href="/" aria-current="page">Home</a>
     <a href="#services">Services</a>
     <a href="#process">Process</a>
+    <a href="#projects">Our Work</a>
     <a href="#areas">Service Areas</a>
     <a href="#guides">Guides</a>
-    <a href="#estimate" class="btn">Free Estimate</a>
+    <a href="https://calendly.com/tino-luminexpainting/30min" class="btn" target="_blank" rel="noopener noreferrer">Book Free Estimate</a>
   </nav>
 </header>
 
@@ -101,19 +113,19 @@ fbq('track', 'PageView');
     <div class="eyebrow">Interior Painters · Concord & Kannapolis, NC</div>
     <h1>Interior painters in Concord &amp; Kannapolis, NC.</h1>
     <p>Luminex Painting Co. focuses on residential interior painting for homeowners in Concord and Kannapolis. Refresh walls, ceilings, trim, baseboards, doors and frames with careful preparation, clean workmanship and a clearly defined project scope.</p>
-    <div class="hero-actions"><a class="btn light" href="https://calendly.com/tino-luminexpainting/30min" target="_blank" rel="noopener noreferrer" aria-label="Book a free 30-minute interior painting estimate online">Book a Free Estimate</a>
-      <a class="btn light" href="#estimate">Request a Free Estimate</a>
-      <a class="btn" style="border-color:rgba(255,255,255,.35)" href="tel:+17047875727">Call (704) 787-5727</a>
-      <a class="btn" style="border-color:rgba(255,255,255,.35)" href="sms:+17047875727" data-text-cta="hero">Text Us</a>
+    <div class="hero-actions">
+      <a class="btn light" href="https://calendly.com/tino-luminexpainting/30min" target="_blank" rel="noopener noreferrer" aria-label="Book a free 30-minute interior painting estimate online">Book a Free Estimate</a>
+      <a class="btn hero-secondary" href="#estimate">Request an Estimate Instead</a>
     </div>
+    <p class="hero-help">Have questions first? <a href="tel:+17047875727">Call (704) 787-5727</a> · <a href="sms:+17047875727" data-text-cta="hero">Text Us</a> · <a href="#projects">See Our Work</a></p>
     <div class="hero-note">OUR PRIMARY SERVICE AREAS: CONCORD &amp; KANNAPOLIS</div>
   </div>
 </section>
 
-<section class="trust">
-  <div><strong>Free Estimates</strong>Start with a clear project conversation</div>
-  <div><strong>Interior Focus</strong>Walls, ceilings, trim, doors & frames</div>
-  <div><strong>Written Scope</strong>Know what is included before work begins</div>
+<section class="trust" aria-label="Why homeowners choose Luminex">
+  <div><strong>Insured Business</strong>General liability insurance in place</div>
+  <div><strong>Interior Painting Focus</strong>Walls, ceilings, trim, doors &amp; frames</div>
+  <div><strong>Clear Written Scope</strong>Know what is included before work begins</div>
   <div><strong>Final Walkthrough</strong>Review the finished work before completion</div>
 </section>
 <section class="section lead-estimate" id="estimate" aria-labelledby="estimate-title">
@@ -141,8 +153,8 @@ fbq('track', 'PageView');
 
 <section class="section">
   <div class="wrap intro">
-    <div><div class="kicker">The Luminex Standard</div><h2 class="section-title">A better painting experience starts with clarity.</h2></div>
-    <div class="intro-copy">A polished interior depends on more than the finish coat. <strong>Clear expectations, thoughtful preparation, clean lines and attention around trim, doors and edges</strong> help make the finished space feel complete. Luminex focuses on residential interiors so the scope stays centered on the rooms and surfaces inside your home.</div>
+    <div><div class="kicker">About Luminex Painting Co.</div><h2 class="section-title">Focused on your home. Focused on the details.</h2></div>
+    <div class="intro-copy">Luminex Painting Co. specializes in <strong>residential interior painting in Concord and Kannapolis, North Carolina</strong>. Whether you're refreshing one room or planning a larger interior project, we start by understanding your space and providing a clear written scope. From surface preparation to the final walkthrough, our focus is on clean workmanship and straightforward communication. <a href="#projects">See examples of our work →</a></div>
   </div>
 </section>
 
@@ -203,18 +215,18 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="kicker">Actual Luminex Painting Projects</div>
     <h2 class="section-title">Real rooms. Real work.</h2>
-    <p style="color:#d0dde8;max-width:720px;line-height:1.75">See examples of residential interior painting completed by Luminex Painting Co., including a finished living room and additional rooms before or during painting preparation.</p>
+    <p style="color:#d0dde8;max-width:720px;line-height:1.75">See genuine Luminex projects—from a finished living room to spaces before and during painting preparation. Every photo is labeled so you can tell which stage of the project it shows.</p>
     <div class="gallery">
       <figure><img src="images/luminex-finished-living-room.jpg" alt="Finished living room with light-colored walls painted by Luminex Painting Co." width="960" height="1280" loading="lazy" decoding="async"><figcaption>Finished living room · Luminex project</figcaption></figure>
       <figure><img src="images/luminex-painting-preparation.jpg" alt="Interior painting in progress with the floor protected and painting equipment in place" width="960" height="1280" loading="lazy" decoding="async"><figcaption>Preparation on a separate project</figcaption></figure>
-      <div class="gallery-prompt"><h3>Imagine your next room refreshed.</h3><p>Interior walls, ceilings, trim and doors. Free painting estimates in Concord, Kannapolis and nearby communities.</p><a href="#estimate">Request your free estimate →</a></div>
+      <div class="gallery-prompt"><h3>Ready to refresh a room?</h3><p>Interior walls, ceilings, trim and doors. Free, 30-minute on-site estimates in Concord and Kannapolis.</p><a href="https://calendly.com/tino-luminexpainting/30min" target="_blank" rel="noopener noreferrer">Book your free estimate →</a></div>
     </div>
     <div class="additional-work" aria-label="More painting project preparation photos">
 <h3>More rooms during preparation</h3>
 <div class="additional-work-grid">
 <figure><img src="images/luminex-laundry-before-preparation.jpg" alt="Laundry room before surface preparation, showing wall marks and repair areas" width="900" height="1200" loading="lazy" decoding="async"><figcaption><strong>Laundry room · Before preparation</strong>Existing wall marks and repair areas before painting preparation.</figcaption></figure>
 <figure><img src="images/luminex-room-wall-preparation.jpg" alt="Interior room with taped floor protection and unfinished wall surfaces prepared for painting" width="900" height="1200" loading="lazy" decoding="async"><figcaption><strong>Interior room · Work in progress</strong>Walls and flooring protected during an interior finishing and painting project.</figcaption></figure>
-</div></div><div class="gallery-note">Photos show genuine Luminex projects at different stages. Preparation photos are not presented as finished results.</div>
+</div></div><div class="gallery-note">Photos show genuine Luminex projects at different stages. Preparation photos are not presented as finished results.</div><div class="gallery-actions"><a class="btn light" href="https://calendly.com/tino-luminexpainting/30min" target="_blank" rel="noopener noreferrer">Book a Free Estimate</a><a class="gallery-alt" href="#estimate">Prefer an estimate request? Use our form →</a></div>
   </div>
 </section>
 
@@ -293,7 +305,7 @@ fbq('track', 'PageView');
     <div class="faq-grid">
       <details><summary>What types of painting does Luminex focus on?</summary><p>Residential interior painting, including walls, ceilings, trim, baseboards, interior doors and frames.</p></details>
       <details><summary>Do you paint cabinets?</summary><p>Cabinet painting is not part of our current service focus. Luminex is currently focused on interior walls, ceilings, trim, baseboards, doors and frames.</p></details>
-      <details><summary>Do you provide free estimates?</summary><p>Yes. Submit the estimate form or call Luminex to get started.</p></details>
+      <details><summary>Do you provide free estimates?</summary><p>Yes. You can <a href="https://calendly.com/tino-luminexpainting/30min" target="_blank" rel="noopener noreferrer">book a free 30-minute on-site estimate online</a>, submit the estimate request form, or call Luminex to get started.</p></details>
       <details><summary>What happens after I submit the form?</summary><p>We review the project details you provide and contact you to discuss the scope and next steps for the estimate.</p></details>
       <details><summary>What areas do you serve?</summary><p>Concord and Kannapolis, NC are our primary service areas. We also consider painting projects in Charlotte, Harrisburg, Salisbury, Huntersville, Mooresville, Davidson and Cornelius, depending on project scope and scheduling.</p></details>
       <details><summary>Does the estimate include preparation?</summary><p>The project scope can include preparation such as addressing small holes, sanding where needed and other surface prep based on the condition of the areas being painted.</p></details>
